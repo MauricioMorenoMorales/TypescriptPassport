@@ -1,9 +1,11 @@
 import mongoose from 'mongoose'
-import config from './config/config'
+import config from './config'
 import chalk from 'chalk'
 
+console.log(chalk.inverse.red(config.USERNAME))
+
 mongoose.connect(
-	`mongodb+srv://${config.DB.USER}:${config.DB.PASSWORD}@nodejsplatzi.cg57m.mongodb.net/${config.DB.DBNAME}?retryWrites=true&w=majority`,
+	`mongodb+srv://${config.USERNAME}:${config.PASSWORD}@nodejsplatzi.cg57m.mongodb.net/${config.DBNAME}?retryWrites=true&w=majority`,
 )
 
 const connection = mongoose.connection
