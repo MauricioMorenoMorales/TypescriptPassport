@@ -1,3 +1,10 @@
-@host = http://localhost4444/signup
+@host = http://localhost:4444/signup
 
+###
 POST {{host}}/
+Content-Type: application/json
+
+{
+	"email":"fazt@faztweb.com",
+	"password":"12345"
+}
