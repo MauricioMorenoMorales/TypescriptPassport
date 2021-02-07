@@ -2,6 +2,8 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 
+import authRoutes from './routes/auth.routes'
+
 //initializations
 const app = express()
 
@@ -18,5 +20,7 @@ app.use(express.json())
 app.get('/', (req, res) => {
 	res.send(`The api is running at port ${app.get('port')}`)
 })
+
+app.use(authRoutes)
 
 export default app

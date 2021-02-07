@@ -1,0 +1,3 @@
+@host = http://localhost4444/signup
+
+POST {{host}}/
