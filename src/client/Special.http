@@ -1,0 +1,10 @@
+@host = http://localhost:4444/special
+
+GET {{host}}/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWY3NDhhM2RlMmUwYmI2NDRlNGQwZiIsImVtYWlsIjoiZmF6dEBmYXp0d2ViLmNvbSIsImlhdCI6MTYxMjY3Njk1Mn0.AhkKqV_LcBh3VVOj1qolbmhCdV8WkLSDoGNwGQjr-Mg
+
+{
+	"email":"fazt@faztweb.com",
+	"password":"12345"
+}

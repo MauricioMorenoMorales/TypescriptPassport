@@ -34,7 +34,6 @@ export const signIn: RequestHandler = async (req, res): Promise<Response> => {
 		return res.status(400).json({ message: 'This user does not exist' })
 	const isMatch = await user.comparePassword(password)
 	if (isMatch) return res.status(200).json({ token: createToken(user) })
-
 	return res
 		.status(400)
 		.json({ message: 'The email or password are incorrect' })
